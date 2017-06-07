@@ -1,14 +1,18 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="PINKESUP_II" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +20,46 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" layoutMarginsFollowReadableWidth="YES" text="Do you know who my favorite man in the world is?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="35" translatesAutoresizingMaskIntoConstraints="NO" id="acy-zx-7rH" userLabel="NEWLabel">
+                                <rect key="frame" x="-3" y="67" width="381" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oDY-DW-6X1">
+                                <rect key="frame" x="161" y="169" width="54" height="30"/>
+                                <state key="normal" title="Tuomas"/>
+                                <connections>
+                                    <action selector="ButtonPUSHED:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4KG-SQ-t8q"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g0n-4y-QFy">
+                                <rect key="frame" x="139" y="318" width="97" height="30"/>
+                                <state key="normal" title="Someone Else"/>
+                                <connections>
+                                    <action selector="ButtonPUSHED:" destination="BYZ-38-t0r" eventType="touchUpInside" id="H1V-Ln-Iyi"/>
+                                    <action selector="ExerciseButtonPush:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8mp-Yg-xSt"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="oDY-DW-6X1" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="EjY-K2-ycb"/>
+                            <constraint firstItem="g0n-4y-QFy" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="GLe-tj-Rf1"/>
+                            <constraint firstItem="acy-zx-7rH" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="47" id="Vtv-O7-z9v"/>
+                            <constraint firstItem="g0n-4y-QFy" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="bTg-cV-aNU"/>
+                            <constraint firstItem="acy-zx-7rH" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="beU-9c-63h"/>
+                            <constraint firstItem="oDY-DW-6X1" firstAttribute="top" secondItem="acy-zx-7rH" secondAttribute="bottom" constant="81" id="xIg-gf-EUE"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="NEWLabel" destination="acy-zx-7rH" id="Moj-HL-kfk"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-92" y="-137.18140929535232"/>
         </scene>
     </scenes>
 </document>

@@ -9,17 +9,48 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    @IBOutlet weak var NEWLabel: UILabel!
+    
+    var tapCount = 0
+    
+    
+    @IBAction func ButtonPUSHED(_ sender: Any) {
+        
+        tapCount = tapCount + 1
+        
+        if tapCount >= 10 {
+            NEWLabel.text = "Any more?"
+        
+    }
+        
+        tapCount = tapCount + 1
+        
+        if tapCount >= 10 {
+            NEWLabel.text = "Any more?"
+            
+        }
+    
+        
+    /* func ExerciseButtonPush(_ sender: Any) {
+        
+        NEWLabel.text = "Buttons are cool"
+        
+    }
+*/
+ 
 
-    override func viewDidLoad() {
+    func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
 
-    override func didReceiveMemoryWarning() {
+
+    func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
 
 
 }
-
+}
