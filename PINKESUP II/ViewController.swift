@@ -12,45 +12,29 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var NEWLabel: UILabel!
     
-    var tapCount = 0
+    @IBOutlet weak var Text1: UITextField!
+    
+    @IBOutlet weak var Text2: UITextField!
+    
     
     
     @IBAction func ButtonPUSHED(_ sender: Any) {
         
-        tapCount = tapCount + 1
-        
-        if tapCount >= 10 {
-            NEWLabel.text = "Any more?"
+     NEWLabel.text = "Answer is: \(Double(Text1.text!)! + Double(Text2.text!)!)"
         
     }
-        
-        tapCount = tapCount + 1
-        
-        if tapCount >= 10 {
-            NEWLabel.text = "Any more?"
-            
-        }
-    
-        
-    /* func ExerciseButtonPush(_ sender: Any) {
-        
-        NEWLabel.text = "Buttons are cool"
-        
-    }
-*/
- 
 
-    func viewDidLoad() {
+    override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
 
 
-    func didReceiveMemoryWarning() {
+    override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
 
 
 }
-}
+
